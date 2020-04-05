@@ -22,10 +22,8 @@ public class CandyBox {
 
     @Override
     public String toString() {
-        return "CandyBox{" + this.getClass().getSimpleName() +
-                " flavor='" + flavor + '\'' +
-                ", origin='" + origin + '\'' +
-                '}';
+        return " flavor = " + flavor + ' '+
+                "origin = "+ origin + '\n';
     }
 
     public String getFlavor(){
@@ -43,8 +41,7 @@ public class CandyBox {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CandyBox candyBox = (CandyBox) o;
-        return Objects.equals(flavor, candyBox.flavor) &&
-                Objects.equals(origin, candyBox.origin);
+        return flavor.equals(candyBox.flavor) ;
     }
 
     @Override

@@ -20,9 +20,7 @@ public class CandyBag {
 
     public void adaugaChocolateBox(CandyBox candyBox){
         if(index < nrBoxes){
-            chocolateBox[index] = candyBox;
-            System.out.println("Am adaugat ciocolata " + candyBox.getClass().getSimpleName() + " la pozitia " + index++);
-
+            chocolateBox[index++] = candyBox;
         }
 
     }

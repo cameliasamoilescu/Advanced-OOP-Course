@@ -20,12 +20,14 @@ public class CandyTest {
 
         adaugaCutii(candyBag);
 
+        System.out.println(candyBag.chocolateBox[0].equals(candyBag.chocolateBox[1]));
+        System.out.println(candyBag.chocolateBox[0].equals(candyBag.chocolateBox[4]));
+
+
         for(int i = 0; (i < candyBag.chocolateBox.length) && (candyBag.chocolateBox[i] != null); i++){
             System.out.println(candyBag.chocolateBox[i].toString());
 
         }
-
-
 
 
     }
