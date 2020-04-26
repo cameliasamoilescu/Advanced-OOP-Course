@@ -13,13 +13,13 @@ package persoana;
 public class Copil extends Abonat{
     int varsta;
 
-    public Copil(String nume, String prenume, String data_inregistrare, String cnp, String numar_telefon, int varsta) {
-        super(nume, prenume, data_inregistrare, cnp, numar_telefon);
+    public Copil(String nume, String prenume,  String cnp, String numarTelefon, int varsta) {
+        super(nume, prenume,  cnp, numarTelefon);
         this.varsta = varsta;
     }
 
     @Override
-    public double acord_reducere() {
+    public double acordReducere() {
         if(this.varsta <  11)
             return 70;
         else
@@ -27,8 +27,8 @@ public class Copil extends Abonat{
     }
 
     @Override
-    public void calculez_pret_legitimatie() {
-        this.pret_legitimatie = this.pret_standard * (1 - this.acord_reducere()/100);
+    public void calculezPretLegitimatie() {
+        this.pretLegitimatie = this.pretStandard * (1 - this.acordReducere()/100);
     }
 
     @Override

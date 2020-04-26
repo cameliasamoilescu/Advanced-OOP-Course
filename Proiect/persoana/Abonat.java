@@ -1,8 +1,11 @@
 package persoana;
 
-import carte.Carte;
+import biblioteca.Imprumut;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Objects;
 
 
@@ -17,25 +20,26 @@ import java.util.Objects;
 public abstract class Abonat{
 
     private String nume, prenume;
-    private String data_inregistrare;
+    private Date dataInregistrare;
     private String cnp;
-    private String numar_telefon;
-    private int nr_abateri;
-    protected double pret_legitimatie;
-    protected static int pret_standard = 50;
+    private String numarTelefon;
+    private int nrAbateri;
+    protected double pretLegitimatie;
+    protected static int pretStandard = 50;
+    private ArrayList<Imprumut> cartiImprumutate;
 
 
-    abstract public double acord_reducere();
-    abstract public void calculez_pret_legitimatie();
+    abstract public double acordReducere();
+    abstract public void calculezPretLegitimatie();
 
-    public Abonat(String nume, String prenume, String data_inregistrare, String cnp, String numar_telefon) {
+    public Abonat(String nume, String prenume, String cnp, String numarTelefon) {
         this.nume = nume;
         this.prenume = prenume;
-        this.data_inregistrare = data_inregistrare;
+        this.dataInregistrare = null;
         this.cnp = cnp;
-        this.numar_telefon = numar_telefon;
-        this.nr_abateri = 0;
-
+        this.numarTelefon = numarTelefon;
+        this.nrAbateri = 0;
+        this.cartiImprumutate = new ArrayList<Imprumut>();
     }
 
     public String getNume() {
@@ -54,16 +58,16 @@ public abstract class Abonat{
         this.prenume = prenume;
     }
 
-    public String getData_inregistrare() {
-        return data_inregistrare;
+    public Date getDataInregistrare() {
+        return dataInregistrare;
     }
 
-    public void setData_inregistrare(String data_inregistrare) {
-        this.data_inregistrare = data_inregistrare;
+    public void setDataInregistrare(Date dataInregistrare) {
+        this.dataInregistrare = dataInregistrare;
     }
 
-    public void setPret_legitimatie(double pret_legitimatie) {
-        this.pret_legitimatie = pret_legitimatie;
+    public void setPretLegitimatie(double pretLegitimatie) {
+        this.pretLegitimatie = pretLegitimatie;
     }
 
     public String getCnp() {
@@ -74,26 +78,47 @@ public abstract class Abonat{
         this.cnp = cnp;
     }
 
-    public String getNumar_telefon() {
-        return numar_telefon;
+    public String getNumarTelefon() {
+        return numarTelefon;
     }
 
-    public void setNumar_telefon(String numar_telefon) {
-        this.numar_telefon = numar_telefon;
+    public void setNumarTelefon(String numarTelefon) {
+        this.numarTelefon = numarTelefon;
     }
 
-    public int getNr_abateri() {
-        return nr_abateri;
+    public int getNrAbateri() {
+        return nrAbateri;
     }
 
-    public void setNr_abateri(int nr_abateri) {
-        this.nr_abateri = nr_abateri;
+    public void setNrAbateri(int nrAbateri) {
+        this.nrAbateri = nrAbateri;
     }
 
-    public double getPret_legitimatie() {
-        return pret_legitimatie;
+    public double getPretLegitimatie() {
+        return pretLegitimatie;
     }
 
+    public static int getPretStandard() {
+        return pretStandard;
+    }
+
+    public static void setPretStandard(int pretStandard) {
+        Abonat.pretStandard = pretStandard;
+    }
+
+    public ArrayList<Imprumut> getCartiImprumutate() {
+        return cartiImprumutate;
+    }
+
+    public void setCartiImprumutate(ArrayList<Imprumut> cartiImprumutate) {
+        this.cartiImprumutate = cartiImprumutate;
+    }
+
+    String afisareData(Date data){
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        String date = dateFormat.format(data);
+        return date;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -108,11 +133,11 @@ public abstract class Abonat{
     public String toString() {
         return "\n nume='" + nume + '\'' +
                 ",\n prenume='" + prenume + '\'' +
-                ",\n data_inregistrare='" + data_inregistrare + '\'' +
+                ",\n data_inregistrare='" + this.afisareData(dataInregistrare) + '\'' +
                 ",\n cnp='" + cnp + '\'' +
-                ",\n numar_telefon='" + numar_telefon + '\'' +
-                ",\n nr_abateri=" + nr_abateri +
-                ",\n pret_legitimatie=" + pret_legitimatie ;
+                ",\n numar_telefon='" + numarTelefon + '\'' +
+                ",\n nr_abateri=" + nrAbateri +
+                ",\n pret_legitimatie=" + pretLegitimatie;
     }
 
 }

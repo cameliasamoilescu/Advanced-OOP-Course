@@ -14,8 +14,8 @@ import java.util.Objects;
 public class Manual extends Carte{
     private String materie;
 
-    public Manual(int id_carte, String titlu, String autor, String materie) {
-        super(id_carte, titlu, autor);
+    public Manual(String titlu, String autor, String materie) {
+        super(titlu, autor);
         this.materie = materie;
     }
 
@@ -47,7 +47,6 @@ public class Manual extends Carte{
         return "Manual {" +
                 super.toString() +
                 ", materie='" + materie + '\'' +
-                ", imprumutata=" + imprumutata +
                 " }";
     }
 }

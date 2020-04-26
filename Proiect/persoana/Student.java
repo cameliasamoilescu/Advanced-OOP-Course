@@ -12,31 +12,31 @@ package persoana;
 
 public class Student extends Abonat {
 
-    private boolean carnet_vizat;
+    private boolean carnetVizat;
 
-    public Student(String nume, String prenume, String data_inregistrare, String cnp, String numar_telefon, boolean carnet_vizat) {
-        super(nume, prenume, data_inregistrare, cnp, numar_telefon);
-        this.carnet_vizat = carnet_vizat;
+    public Student(String nume, String prenume,  String cnp, String numarTelefon, boolean carnetVizat) {
+        super(nume, prenume, cnp, numarTelefon);
+        this.carnetVizat = carnetVizat;
     }
 
     @Override
     public String toString() {
         return  "\nStudent {" + super.toString() +
-                "\n\t\tcarnet_vizat=" + carnet_vizat +
-                "\n\t\tpret_legitimatie=" + pret_legitimatie +
+                "\n\t\tcarnet_vizat=" + carnetVizat +
+                "\n\t\tpret_legitimatie=" + pretLegitimatie +
                 "}\n";
     }
 
 
     @Override
-    public double acord_reducere() {
-        if(carnet_vizat)
+    public double acordReducere() {
+        if(carnetVizat)
             return 50;
         else return 0;
     }
 
     @Override
-    public void calculez_pret_legitimatie() {
-        this.pret_legitimatie = this.pret_standard * (1 - this.acord_reducere()/100);
+    public void calculezPretLegitimatie() {
+        this.pretLegitimatie = this.pretStandard * (1 - this.acordReducere()/100);
     }
 }

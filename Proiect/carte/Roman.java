@@ -14,8 +14,8 @@ public class Roman extends Carte{
     private String gen;
 
 
-    public Roman(int id_carte, String titlu, String autor, String gen) {
-        super(id_carte, titlu, autor);
+    public Roman(String titlu, String autor, String gen) {
+        super(titlu, autor);
         this.gen = gen;
     }
 
@@ -49,7 +49,6 @@ public class Roman extends Carte{
         return "Roman {" +
                 super.toString() +
                 " gen='" + gen + '\'' +
-                ", imprumutata=" + imprumutata +
-                " }";
+                "}";
     }
 }

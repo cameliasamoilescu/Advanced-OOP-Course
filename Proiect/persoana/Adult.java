@@ -1,6 +1,5 @@
 package persoana;
 
-
 /**
  * Clasa Adult este derivata din Abonat si
  * implementeaza metodele abstracte
@@ -14,11 +13,11 @@ public class Adult extends Abonat {
 
 
     //daca se incadreaza in criteriile pentru reducere
-    private boolean criteriu_reducere;
+    private boolean criteriuReducere;
 
-    public Adult(String nume, String prenume, String data_inregistrare, String cnp, String numar_telefon, boolean criteriu_reducere) {
-        super(nume, prenume, data_inregistrare, cnp, numar_telefon);
-        this.criteriu_reducere = criteriu_reducere;
+    public Adult(String nume, String prenume, String cnp, String numarTelefon, boolean criteriuReducere) {
+        super(nume, prenume, cnp, numarTelefon);
+        this.criteriuReducere = criteriuReducere;
     }
 
 
@@ -26,21 +25,21 @@ public class Adult extends Abonat {
     public String toString() {
 
         return "\nAdult { "+ super.toString() +
-                "\n\t\tcriteriu_reducere=" + criteriu_reducere +
-                "\n\t\tpret_legitimatie=" + pret_legitimatie +
+                "\n\t\tcriteriu_reducere=" + criteriuReducere +
+                "\n\t\tpret_legitimatie=" + pretLegitimatie +
                 "}\n";
     }
 
     @Override
-    public double acord_reducere() {
-        if(criteriu_reducere)
+    public double acordReducere() {
+        if(criteriuReducere)
             return 10;
         return 0;
     }
 
     @Override
-    public void calculez_pret_legitimatie() {
-        this.pret_legitimatie = this.pret_standard * (1 - this.acord_reducere()/100);
+    public void calculezPretLegitimatie() {
+        this.pretLegitimatie = this.pretStandard * (1 - this.acordReducere()/100);
     }
 
 

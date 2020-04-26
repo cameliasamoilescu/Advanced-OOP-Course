@@ -8,7 +8,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Locale;
 
 
 /**
@@ -24,34 +23,34 @@ import java.util.Locale;
 public class Imprumut {
 
     protected Abonat abonat;
-    private String data_imprumut;
-    private String data_restituire;
-    Carte carte;
+    private Date dataImprumut;
+    private Date dataRestituire;
+    protected Carte carte;
 
 
-    public Imprumut(Abonat abonat, String data_imprumut, String data_restituire, Carte carte) {
+    public Imprumut(Abonat abonat, Date dataImprumut, Date dataRestituire, Carte carte) {
         this.abonat = abonat;
-        this.data_imprumut = data_imprumut;
-        this.data_restituire = data_restituire;
+        this.dataImprumut = dataImprumut;
+        this.dataRestituire = dataRestituire;
         this.carte = carte;
 
 
     }
 
-    public String getData_imprumut() {
-        return data_imprumut;
+    public Date getDataImprumut() {
+        return dataImprumut;
     }
 
-    public void setData_imprumut(String data_imprumut) {
-        this.data_imprumut = data_imprumut;
+    public void setDataImprumut(Date dataImprumut) {
+        this.dataImprumut = dataImprumut;
     }
 
-    public String getData_restituire() {
-        return data_restituire;
+    public Date getDataRestituire() {
+        return dataRestituire;
     }
 
-    public void setData_restituire(String data_restituire) {
-        this.data_restituire = data_restituire;
+    public void setDataRestituire(Date dataRestituire) {
+        this.dataRestituire = dataRestituire;
     }
 
     public Carte getCarte() {
@@ -64,35 +63,38 @@ public class Imprumut {
 
 
 
-    public void prelungeste_perioada(String data_curenta) throws ParseException {
-        this.data_imprumut = data_curenta;
-        this.calculeaza_data_restituire();
+    public void prelungestePerioada(Date dataCurenta) throws ParseException {
+        this.dataImprumut = dataCurenta;
+        this.calculeazaDataRestituire();
     }
 
-    public void calculeaza_data_restituire() throws ParseException {
-
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
-        Date dt = formatter.parse(this.data_imprumut);
+    public void calculeazaDataRestituire() throws ParseException {
 
 
         // in functie de fiecare carte calculam data restituirii
         Calendar c = Calendar.getInstance();
-        c.setTime(dt);
+        c.setTime(this.dataImprumut);
         c.add(Calendar.DATE, carte.zileImprumut());
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        String data_restituire = dateFormat.format(c.getTime());
+        Date dataRestituire = c.getTime();
 
-        this.data_restituire = data_restituire;
+        this.dataRestituire = dataRestituire;
 
+    }
+
+    String afisareData(Date data){
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        String date = dateFormat.format(data);
+        return date;
     }
 
     @Override
     public String toString() {
         return "\nImprumut { " +
                 "abonat = " + abonat +
-                "\n\t\t\tdata_imprumut = " + data_imprumut + '\'' +
-                "\n\t\t\tdata_restituire = " + data_restituire + '\'' +
+                "\n\t\t\tdata_imprumut = " + this.afisareData(dataImprumut) + '\'' +
+                "\n\t\t\tdata_restituire = " + this.afisareData(dataRestituire) + '\'' +
                 "\n\t\t\tcarte = " + carte +
                 '}';
     }

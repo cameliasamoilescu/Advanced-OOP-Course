@@ -15,26 +15,28 @@ import java.util.Objects;
 
 public abstract class Carte {
 
-    private int id_carte;
+    private static int counter = 0;
+    private int idCarte;
     private String titlu;
     private String autor;
     protected boolean imprumutata;
 
 
-    public Carte(int id_carte, String titlu, String autor) {
-        this.id_carte = id_carte;
+    public Carte(String titlu, String autor) {
+        this.counter += 1;
+        this.idCarte = counter;
         this.titlu = titlu;
         this.autor = autor;
         this.imprumutata = false;
     }
 
 
-    public int getId_carte() {
-        return id_carte;
+    public int getIdCarte() {
+        return idCarte;
     }
 
-    public void setId_carte(int id_carte) {
-        this.id_carte = id_carte;
+    public void setIdCarte(int idCarte) {
+        this.idCarte = idCarte;
     }
 
     public String getTitlu() {
@@ -79,7 +81,7 @@ public abstract class Carte {
     @Override
     public String toString() {
         return
-                "id_carte = " + id_carte +
+                "id_carte = " + idCarte +
                 ", titlu = '" + titlu + '\'' +
                 ", autor = '" + autor + '\'' +
                 ", imprumutata = " + imprumutata;

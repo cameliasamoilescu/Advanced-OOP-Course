@@ -4,7 +4,7 @@ import persoana.Abonat;
 
 import java.util.Comparator;
 
-public class sortareAbonati implements Comparator<Abonat> {
+public class SortareAbonati implements Comparator<Abonat> {
     @Override
     public int compare(Abonat o1, Abonat o2) {
 

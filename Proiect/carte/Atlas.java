@@ -17,8 +17,8 @@ public class Atlas extends Carte{
 
     private String editura;
 
-    public Atlas(int id_carte, String titlu, String autor, String editura) {
-        super(id_carte, titlu, autor);
+    public Atlas( String titlu, String autor, String editura) {
+        super(titlu, autor);
         this.editura = editura;
     }
 
@@ -49,7 +49,6 @@ public class Atlas extends Carte{
         return "Atlas {" +
                 super.toString() +
                 ", editura='" + editura + '\'' +
-                ", imprumutata=" + imprumutata +
                 " }";
     }
 }

@@ -18,8 +18,8 @@ public class Dictionar extends Carte {
     private String editura;
 
 
-    public Dictionar(int id_carte, String titlu, String autor, String tip, String editura) {
-        super(id_carte, titlu, autor);
+    public Dictionar(String titlu, String autor, String tip, String editura) {
+        super(titlu, autor);
         this.tip = tip;
         this.editura = editura;
     }
@@ -61,7 +61,6 @@ public class Dictionar extends Carte {
                 + super.toString() +
                 ", tip='" + tip + '\'' +
                 ", editura='" + editura + '\'' +
-                ", imprumutata=" + imprumutata +
                 " } " ;
     }
 }
