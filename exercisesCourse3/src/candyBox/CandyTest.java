@@ -1,4 +1,4 @@
-package CandyBox;
+package candyBox;
 
 import CandyBox.Heidi.Heidi;
 import CandyBox.Lindt.Lindt;

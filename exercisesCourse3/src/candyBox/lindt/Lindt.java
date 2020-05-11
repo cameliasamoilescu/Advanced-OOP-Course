@@ -1,6 +1,6 @@
-package CandyBox.Lindt;
+package candyBox.lindt;
 
-import CandyBox.CandyBox;
+import candyBox.CandyBox;
 
 public class Lindt extends CandyBox {
     private int length, width, height;

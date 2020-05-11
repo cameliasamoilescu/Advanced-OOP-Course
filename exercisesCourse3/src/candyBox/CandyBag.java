@@ -1,4 +1,4 @@
-package CandyBox;
+package candyBox;
 
 public class CandyBag {
 

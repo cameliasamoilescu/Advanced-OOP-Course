@@ -1,6 +1,6 @@
-package CandyBox.Milka;
+package candyBox.milka;
 
-import CandyBox.CandyBox;
+import candyBox.CandyBox;
 
 public class Milka extends CandyBox {
     private int height, R;

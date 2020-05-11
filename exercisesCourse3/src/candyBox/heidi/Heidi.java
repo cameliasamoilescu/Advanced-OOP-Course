@@ -1,6 +1,6 @@
-package CandyBox.Heidi;
+package candyBox.heidi;
 
-import CandyBox.CandyBox;
+import candyBox.CandyBox;
 
 public class Heidi extends CandyBox {
     private int length;

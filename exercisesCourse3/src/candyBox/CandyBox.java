@@ -1,4 +1,4 @@
-package CandyBox;
+package candyBox;
 
 import java.util.Objects;
 
