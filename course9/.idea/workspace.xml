@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="756bb039-de90-4fe8-b041-383406a85504" name="Default Changelist" comment="" />
+    <list default="true" id="756bb039-de90-4fe8-b041-383406a85504" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../course7/Lab8.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/META-INF/Lab8.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/collections/list/arraylist/Ex1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/collections/list/arraylist/Ex2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/collections/list/arraylist/Ex3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/collections/list/linkedlist/Ex1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/collections/list/linkedlist/Ex2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/streams/Ex1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/streams/Ex2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/streams/file1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/streams/file2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/streams/file3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course7/out/production/Lab8/streams/file4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/Lab9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/lambda/ex1/Ex1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/lambda/ex1/Ex1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/lambda/ex1/Guitar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/lambda/ex1/Instrument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/lambda/ex2/Ex1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/lambda/ex2/I1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/lambda/ex2/I2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/lambda/functionalinterfaces/Ex1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/singleton/ConcurentLazySingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/singleton/EagerSingelton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../course8/out/production/Lab9/singleton/LazySingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab10.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab10/intermediaryops/Ex1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab10/optional/Ex1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab10/optional/Ex2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab10/optional/Ex3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab10/streamsource/Ex1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab10/streamsource/Ex2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab10/streamsource/Ex3.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +48,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1bFM89ylxAl7O3eBmmy1OrzsTis" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -141,10 +179,10 @@
     </state>
     <state width="1398" height="2" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1588229627413" />
     <state width="1398" height="220" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1588228105218" />
-    <state x="397" y="262" key="com.intellij.ide.util.TipDialog" timestamp="1588223229454">
+    <state x="397" y="262" key="com.intellij.ide.util.TipDialog" timestamp="1589370427043">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state x="397" y="262" key="com.intellij.ide.util.TipDialog/0.23.1440.811@0.23.1440.811" timestamp="1588223229454" />
+    <state x="397" y="262" key="com.intellij.ide.util.TipDialog/0.23.1440.811@0.23.1440.811" timestamp="1589370427043" />
     <state x="446" y="158" width="670" height="676" key="search.everywhere.popup" timestamp="1588228612927">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
